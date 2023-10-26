@@ -1,0 +1,15 @@
+<h3> This is Parent Component</h3>
+
+<button (click)="onclick()" > Click </button>
+
+<app-child [item]="currentItem"  (newItemEvent)="addItem($event)"> </app-child>
+
+
+<!-- /<p> {{items}} </p> -->
+<ul>
+  <li *ngFor="let item of items">{{item}}</li>
+</ul>
+
+<ul *ngFor="let usr of userDetails">
+  <app-user-detail [data]="usr"> </app-user-detail>
+</ul>
